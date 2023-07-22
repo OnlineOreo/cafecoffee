@@ -1,0 +1,280 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    background-color: rgb(179, 134, 39);
+}
+.container .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.container .navbar .logo img{
+    width: 70px;
+}
+.container .navbar .navtabs span{
+    color: white;
+    margin: 0px 20px;
+    padding: 3px 0px;
+    font-family: calibri;
+    cursor: pointer;
+}
+.container .navbar .navtabs span:hover{
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid white;
+}
+.container .navbar button{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: none;
+    color: black;
+}
+.container .navbar button:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(90, 85, 72,0.5);
+    color: rgb(255, 255, 255);
+}
+.container .section1 .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 50px;
+}
+.container .section1 .box .left{
+    padding-bottom: 150px;
+}
+.container .section1 .box .left h5{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container .section1 .box .left h1{
+    margin-top: 30px;
+    font-size: 5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container .section2 .heading{
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    position: relative;
+    display:block;
+    left: 40%;
+}
+.container .section2 .heading h1{
+    width: 20%;
+}
+.container .section2 .heading h2{
+    /* position: relative; */
+    /* left: 40%; */
+    width: 12%;
+    border-bottom: 2px solid white;
+}
+.container .section2 .box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0px;
+}
+.container .section2 .box .card{
+    width: 300px;
+    height: 500px;
+    border: 1px solid rgb(61, 61, 61);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.582);
+    background: linear-gradient(45deg,rgba(173, 93, 18, 0.651),rgba(126, 196, 79, 0.459));
+}
+.container .section2 .box .card .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.container .section2 .box .card{
+    padding: 10px 10px 0px 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.container .section2 .box .card:hover{
+    transform: scale(1.02);
+}
+.container .section2 .box .card .price{
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.container .section2 .box .card .name{
+    padding: 5px 0px 2px 0px;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.container .section2 .box .card .detail{
+    padding: 5px 0px;
+    color: white;
+    font-size: 1rem;
+    font-family: calibri;
+    text-align: center;
+}
+.container .section2 .box .card .button{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
+.container .section2 .box .card .button button{
+    padding: 5px 80px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-family: calibri;
+    background: none;
+    border: 2px solid rgb(255, 255, 255);
+}
+.container .section2 .box .card .button button:hover{
+    background: rgba(255, 255, 255, 0.13);
+}
+.container .section3 {
+    margin: 100px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .section3 .left h4{
+    font-family: calibri;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+.container .section3 .left h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4rem;
+}
+.container .section3 .left h2{
+    width: 10%;
+    border: 2px solid black;
+    margin: 10px 0px;
+}
+.container .section3 .left h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    margin: 20px 0px;
+}
+.container .section3 .left p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin: 20px 0px;
+}
+.container .section3 .left button{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: none;
+    color: rgb(0, 0, 0);
+    margin: 20px 0px;
+}
+.container .section3 .left button:hover{
+    background: rgba(255, 255, 255, 0.178);
+}
+
+.container .section4{
+    margin: 100px 50px;
+}
+.container .section4 .box{
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.61);
+    margin: 100px 0px 100px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .section4 .box .right h4{
+    font-family: calibri;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+.container .section4 .box .right h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4rem;
+}
+.container .section4 .box .right h2{
+    width: 10%;
+    border: 2px solid black;
+    margin: 10px 0px;
+}
+.container .section4 .box .right h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    margin: 20px 0px;
+}
+.container .section4 .box .right p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin: 20px 0px;
+}
+.container .section4 .box .right button{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: none;
+    color: rgb(0, 0, 0);
+    margin: 20px 0px;
+}
+.container .section4 .box .right button:hover{
+    background: rgba(255, 255, 255, 0.178);
+}
+
+.container .section5 .heading{
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    left: 40%;
+}
+.container .section5 .heading h2{
+    font-size: 4rem;
+}
+.container .section5 .heading h4{
+    width: 30%;
+    border-bottom: 2px solid black;
+}
+.container .section5 .box{
+    display: flex;
+    justify-content: space-around;
+}
+.container .section5 .box .left{
+    width: 50%;
+    padding: 50px 70px 50px 200px;
+}
+.container .section5 .box .left h3{
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container .section5 .box .left h1{
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
+}
+.container .section5{
+    background: url(./img/image6.png);
+    background-size: cover;
+    background-position: center;
+}
+.container .section5 .box .right{
+    width: 50%;
+    padding: 50px 200px 50px 70px;
+}
+.container .section5 .box .right h3{
+    padding-bottom: 20px;
+    font-size: 1.8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container .section5 .box .right p{
+    font-size: 1.1rem;
+    font-family: calibri;
+    letter-spacing: 1px;
+}
