@@ -6,6 +6,8 @@
 .container{
     width: 100%;
     background-color: rgb(0, 0, 0);
+    position: absolute;
+    z-index: 1;
     background:linear-gradient(90deg,rgba(126, 145, 43, 0.616),rgba(190, 188, 36, 0.781));
 }
 .container .navbar{
@@ -13,6 +15,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+}
+.container .navbar .nav{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .container .navbar .logo img{
     width: 70px;
@@ -45,6 +53,67 @@
     background-color: rgb(90, 85, 72,0.5);
     color: rgb(255, 255, 255);
 }
+.container .navbar .hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+}
+.container .navbar .hamburger span{
+    border: 1.8px solid black;
+    border-radius: 10px;
+}
+@media(max-width:800px){
+    .container .logo{
+        padding: 10px 20px;
+    }
+    .container .navbar{
+        padding: 0px 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .container .navbar .navtabs{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid black;
+    }
+    .container .navbar .nav{
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 85px;
+        background-color: rgba(209, 211, 109, 0.877);
+    }
+    .container .navbar .navtabs span{
+        border-bottom: 1px solid black;
+        line-height: 40px;
+        text-align: center;
+        width: 100%;
+    }
+    .container .navbar .navtabs span:hover{
+        background-color: rgb(162, 180, 72);
+    }
+    .container .navbar .button{
+        border-bottom: 1px solid black;
+        width: 100%;
+        display: none;
+        justify-content: center;
+        padding: 5px 0px;
+        /* text-align: center; */
+    }
+    .container .navbar .hamburger{
+        display: flex;
+    }
+}
 .container .section1 .box{
     display: flex;
     justify-content: space-between;
@@ -52,26 +121,55 @@
     margin: 30px 50px;
 }
 .container .section1 .box .left{
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     font-size: 5rem;
+    width: 50%;
 }
 .container .section1 .box .left h5{
-    font-size: 2rem;
+    font-size: calc(20px + 1vw);
     font-family: 'Courier New', Courier, monospace;
 }
 .container .section1 .box .left h1{
     margin-top: 30px;
-    font-size: calc(10px + 0.8vw);
+    font-size:calc(30px + 2vw);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container .section1 .box .right{
+    width: 50%;
+}
+.container .section1 .box .right img{
+    width: 100%;
+    filter: opacity(0.7);
+}
+@media(max-width:800px){
+   .container .section1 .box{
+    flex-direction: column;
+   }
+   .container .section1 .box .left{
+    margin-top: 100px;
+    width: 100%;
+   }
+   .container .section1 .box .right{
+    width: 80%;
+    position: absolute;
+    z-index: -1;
+   }
 }
 .container .section2 .heading{
     /* margin-bottom: 50px; */
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 3rem;
+    font-size: calc(30px + 1.5vw);
     position: relative;
     display: inline-block;
     left: 40%;
+}
+@media(max-width:800px){
+    .container .section2 .heading{
+        margin-top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 .container .section2 .heading h1{
     /* width: 20%; */
@@ -83,13 +181,13 @@
 }
 .container .section2 .box{
     margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(280px,1fr));
+    column-gap: 70px;
+    row-gap: 50px;
+    padding: 20px 50px;
 }
 .container .section2 .box .card{
-    width: 300px;
     height: 500px;
     border: 1px solid rgb(61, 61, 61);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.582);
@@ -152,6 +250,9 @@
     justify-content: space-around;
     align-items: center;
 }
+.container .section3 .left {
+    width: 45%;
+}
 .container .section3 .left h4{
     font-family: calibri;
     padding-bottom: 10px;
@@ -159,7 +260,7 @@
 }
 .container .section3 .left h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 4rem;
+    font-size: calc(40px + 2vw);
 }
 .container .section3 .left h2{
     width: 10%;
@@ -189,9 +290,29 @@
 .container .section3 .left button:hover{
     background: rgba(255, 255, 255, 0.178);
 }
+.container .section3 .right{
+    width: 55%;
+}
+.container .section3 .right img{
+    width: 100%;
+}
+@media only screen and (max-width: 800px){
+    .container .section3 .left{
+        width: 100%;
+    }
+    .container .section3 .right{
+        width: 90%;
+        position: absolute;
+        z-index: -1;
+        filter: opacity(0.8);
+    } 
+    .container .section3 .right img{
+        width: 100%;
+    } 
+}
 
 .container .section4{
-    margin: 100px 50px;
+    margin: 100px 40px;
 }
 .container .section4 .box{
     border: 1px solid rgb(0, 0, 0);
@@ -218,7 +339,7 @@
 }
 .container .section4 .box .right h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 4rem;
+    font-size: calc(40px + 2vw);
 }
 .container .section4 .box .right h2{
     width: 10%;
@@ -248,6 +369,18 @@
 .container .section4 .box .right button:hover{
     background: rgba(255, 255, 255, 0.178);
 }
+@media(max-width:800px){
+    .container .section4 .box{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .container .section4 .box .left{
+        width: 100%;
+    }
+    .container .section4 .box .right{
+        width: 100%;
+    }
+}
 
 
 .container .section5{
@@ -262,7 +395,7 @@
     left: 40%;
 }
 .container .section5 .heading h2{
-    font-size: 4rem;
+    font-size:calc(30px + 3vw);
 }
 .container .section5 .heading h4{
     width: 30%;
@@ -278,11 +411,11 @@
 }
 .container .section5 .box .left h3{
     padding-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: calc(15px + 1vw);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .container .section5 .box .left h1{
-    font-size: 3rem;
+    font-size: calc(30px + 1vw);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 1px;
 }
@@ -301,6 +434,27 @@
     font-family: calibri;
     letter-spacing: 1px;
 }
+@media(max-width:800px){
+    .container .section5{
+        background: none;
+        padding: 50px 0px;
+    }
+    .container .section5 .heading{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .container .section5 .box{
+        flex-direction: column;
+    }
+    .container .section5 .box .left{
+        width: 100%;
+        padding: 50px 20px;
+    }
+    .container .section5 .box .right{
+       width: 100%;
+       padding: 0px 20px;
+    }
+}
 
 .footer{
     margin-top: 50px;
@@ -316,7 +470,7 @@
     padding: 30px 90px 0px 90px;
 }
 .footer .row1 .coloum1 h1{
-    font-size: 3.5rem;
+    font-size: calc(8px + 2.8vw);
     margin: 50px 0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -324,7 +478,7 @@
     filter: brightness(0%);
 }
 .footer .row1 .coloum1 p{
-    font-size: 1.2rem;
+    font-size: calc(8px + 1vw);
     padding: 20px 0px;
     letter-spacing: 1px;
     font-family: Arial, Helvetica, sans-serif;
@@ -337,14 +491,14 @@
 .footer .row1 .coloum2 h2{
     margin: 45px 0px 30px 0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;
+    font-size: calc(8px + 2vw);
     letter-spacing: 1px;
 
 }
 .footer .row1 .coloum2 h5{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    letter-spacing: .8px;
+    font-size: calc(5px + 1vw);
+    letter-spacing: 0.8px;
     padding: 6px 0px;
     cursor: pointer;
 
@@ -356,13 +510,13 @@
 .footer .row1 .coloum3 h2{
     margin: 40px 0px 30px 0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;
+    font-size: calc(8px + 2vw);
     letter-spacing: 1px;
 
 }
 .footer .row1 .coloum3 p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: calc(8px + 1vw);
     letter-spacing: 1px;
     line-height: 25px;
     padding: 6px 0px;
@@ -371,7 +525,7 @@
 .footer .row1 .coloum3 h4{
     margin: 10px 0px 10px 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
+    font-size: calc(8px + 1vw);
     color: rgb(20, 34, 97);
     letter-spacing: 1px;
     cursor: pointer;
@@ -389,5 +543,79 @@
     /* height: 10vh; */
     text-align: center;
     line-height: 50px;
+    font-size: calc(12px + 0.8vw);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media(max-width:800px){
+    .footer .row .row1{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer .row1 .coloum1{
+        width: 45%;
+        padding: 5px 10px;
+    }
+    .footer .row1 .coloum1 h1{
+        font-size: calc(8px + 2.8vw);
+        margin: 50px 0px 10px 0px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .footer .row1 .coloum1 img{
+        width: 50%;
+    }
+    .footer .row1 .coloum1 p{
+        padding: 10px 0px;
+        letter-spacing: 0px;
+        line-height: 20px;
+    }
+    .footer .row1 .coloum2{
+        width: 17%;
+        padding: 0px 0px;
+    }
+    .footer .row1 .coloum2 h2{
+        margin: 45px 0px 10px 0px;
+        letter-spacing: 0px;
+    
+    }
+    .footer .row1 .coloum2 h5{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: calc(5px + 1vw);
+        letter-spacing: 0px;
+        padding: 2px 0px;
+    
+    }
+    .footer .row1 .coloum3{
+        width: 38%;
+        padding: 40px 10px;
+    }
+    .footer .row1 .coloum3 h2{
+        margin: 0px 0px 10px 0px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        letter-spacing: 0px;
+    
+    }
+    .footer .row1 .coloum3 p{
+        letter-spacing: 0px;
+        line-height: 17px;
+        padding: 6px 0px;
+    
+    }
+    .footer .row1 .coloum3 h4{
+        margin: 10px 0px 10px 0px;
+        letter-spacing: 0px;
+        cursor: pointer;
+    
+    }
+    .footer .row1 .coloum3 .img{
+        margin-top: 30px;
+        cursor: pointer;
+       width: 100%;
+    }
+    .footer .row1 .coloum3 .img img{
+      width: 30%;
+    }
+    .footer .row2{
+        height: 40px;
+        line-height: 40px;
+    }
 }
